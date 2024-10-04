@@ -30,7 +30,7 @@ class Character extends HTMLElement {
 
     attributeChangedCallback(propName:Attribute,oldValue: string | undefined,newValue: string | undefined){
         switch(propName){
-
+            
             default: 
             this[propName] = newValue;
             break;
@@ -46,9 +46,9 @@ class Character extends HTMLElement {
     render() {
         if(this.shadowRoot){
             this.shadowRoot.innerHTML = `
-          
-          
 
+            <link rel="stylesheet" href="../src/components/Character/Character.css">
+          
             <div id="card">
             <div>
             <img src="${this.image || 'No image'}" alt="imagen de: ${this.name}">
